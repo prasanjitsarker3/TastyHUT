@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="pt-2">
+        <div class="navbar bg-base-100 px-5">
+            <div class="flex-1">
+                <a class="btn btn-ghost normal-case text-xl">
+                    <img src="images/Tasty_HUT.png" alt="" srcset="">
+                </a>
+            </div>
+            <div class="flex-none gap-2">
+
+                <div class="dropdown dropdown-end">
+                    <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                        <div class="w-20 rounded-full">
+                            <img src="images/circle.jpg" />
+                        </div>
+                    </label>
+                    <ul tabindex="0"
+                        class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
+                        <li>
+                            <a class="justify-between">
+                                Profile
+                                <span class="badge">New</span>
+                            </a>
+                        </li>
+                        <li><a>Settings</a></li>
+                        <li><a>Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="header-back ">
+            <div class="flex items-center justify-center h-screen text-center gap-5 ">
+
+                <div class="gap-5">
+                    <h1 class="text-5xl text-white font-bold py-6">Taste Our Delicious Best Foodies</h1>
+                    <p class="text-xl text-white py-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex
+                        suscipit
+                        velit ea commodi! Beatae
+                        rerum
+                        et corporis placeat autem ut?</p>
+
+                    <div class="flex justify-center items-center">
+                        <input id="search-text" type="text" placeholder="Searching Food...."
+                            class="input input-bordered input-success w-full max-w-xs text-xl" />
+                        <button onclick="searchLoadData()" class="btn btn-outline btn-success">Search</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <main class="w-[80%] mx-auto gap-5">
+        <section class="grid lg:grid-cols-3 md:grid-cols-2 gap-5 pt-4" id="card-container">
+
+        </section>
+        <input type="checkbox" id="my-modal-6" class="modal-toggle" />
+        <div class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box">
+                <img id="modal-images" src="" alt="" srcset="" class="rounded-xl">
+                <h3 id="modal-title" class="font-bold text-2xl text-center"></h3>
+                <div id="modalBody">
+
+                </div>
+                <p id="modal-about" class="py-4 text-lg text-center"></p>
+                <div class="modal-action">
+                    <label for="my-modal-6" class="btn">Close!</label>
+                </div>
+            </div>
+        </div>
+        <div class="text-center text-2xl p-16">
+            <button onclick="showAllDetails()" class="btn btn-active btn-primary">Show All</button>
+        </div>
+        <section id="showCard">
+
+        </section>
+    </main>
+
+
+
+
+
+    <script src="JS/app.js"></script>
+</body>
+
+</html>
